@@ -29,7 +29,7 @@
       position: absolute
       bottom: 18px
       left: 0
-      width: 30px
+      width: 0px
       height: 4px
       background-color: $highlight
 
@@ -51,10 +51,10 @@
       .btn-background
         position: absolute
         top: 0
-        left: 23px
+        left: 127px
         right: 0
         height: 100%
-        background-color: $highlight
+        background-color: $accent2
         z-index: -1
         transition: left .2s ease-in-out
 
@@ -86,8 +86,9 @@
     & > a
       max-width: 250px
       text-decoration: none
-      color: $muted-gray
+      color: $muted-white
       transition: color .2s ease-in-out
+      cursor: default
 
       &:hover
         color: $white
@@ -95,6 +96,7 @@
     h3
       font-size: 16px
       text-transform: uppercase
+      color: $highlight
 
     p
       margin-bottom: 0

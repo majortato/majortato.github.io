@@ -1,15 +1,24 @@
-// @codekit-prepend "/vendor/hammer-2.0.8.js";
+//@codekit-prepend "/vendor/hammer-2.0.8.js";
 
 $( document ).ready(function() {
 
   // DOMMouseScroll included for firefox support
   var canScroll = true,
       scrollController = null;
+
+  $('.bottomsheet-open').click(function() {
+    canScroll = false;
+  });
+
+  $('.close-canvas').click(function() {
+    canScroll = true;
+  });
+
   $(this).on('mousewheel DOMMouseScroll', function(e){
 
     if (!($('.outer-nav').hasClass('is-vis'))) {
 
-      e.preventDefault();
+      //e.preventDefault();
 
       var delta = (e.originalEvent.wheelDelta) ? -e.originalEvent.wheelDelta : e.originalEvent.detail * 20;
 
@@ -152,7 +161,6 @@ $( document ).ready(function() {
   }
 
   function outerNav() {
-
     $('.header--nav-toggle').click(function(){
 
       $('.perspective').addClass('perspective--modalview');

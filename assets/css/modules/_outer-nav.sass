@@ -13,7 +13,6 @@
   position: relative
   transform: translateZ(0) translateX(0) rotateY(0deg)
   min-height: 100%
-  outline: 30px solid $highlight
   transition: transform .4s
 
 .modalview
@@ -72,6 +71,7 @@
     font-size: 55px
     font-weight: 900
     opacity: 0
+    padding-left: 24px
     cursor: pointer
     transition: transform .2s, opacity .2s
 
@@ -83,11 +83,10 @@
     &::before
       content: ""
       position: absolute
-      top: 50%
-      left: 50%
-      transform: translate(-50%, -25%)
-      width: 110%
-      height: 15px
+      top: 30%
+      left: 0
+      width: 8px
+      height: 40px
       opacity: 0
       background-color: $highlight
 
