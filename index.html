@@ -10,7 +10,7 @@
   <meta name="author" content="David Wan">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="assets/css/main.css">
-
+  <link rel="icon" type="image/x-icon" href="assets/img/favicon.png">
 </head>
 <body>
 
@@ -81,89 +81,63 @@
               </div>
             </div>
           </li>
-          <li class="l-section section">
-            <div class="work">
-              <h2>Works</h2>
-              <div class="work--lockup">
-                <ul class="slider">
-                  <li class="slider--item slider--item-left">
-                    <a href="#0">
-                      <div class="slider--item-image">
-                        <img src="assets/img/work-ds.png" alt="Medtronic UI Design System">
-                      </div>
-                      <p class="slider--item-title">Medtronic UI Design System</p>
-                      <p class="slider--item-description">A cohesive design language with designer and developer assets 
-                        that implements the voice of brand</p>
-                    </a>
-                  </li>
-                  <li class="slider--item slider--item-center">
-                    <a href="#0">
-                      <div class="slider--item-image">
-                        <img src="assets/img/work-linqwf.png" alt="LINQ Workflow">
-                      </div>
-                      <p class="slider--item-title">LINQ Workflow</p>
-                      <p class="slider--item-description">A new framework and workflow for improving patient 
-                        monitoring efficiencies for cardiac device nurses</p>
-                    </a>
-                  </li>
-                  <li class="slider--item slider--item-right">
-                    <a href="#0">
-                      <div class="slider--item-image">
-                        <img src="assets/img/work-cln.png" alt="CareLink Platform">
-                      </div>
-                      <p class="slider--item-title">CareLink Platform</p>
-                      <p class="slider--item-description">Evolving the cardiac patient care platform</p>
-                    </a>
-                  </li>
-                  <li class="slider--item ">
-                    <a href="#0">
-                      <div class="slider--item-image">
-                        <img src="assets/img/work-nbweb.png" alt="Veritas NetBackup Web UI">
-                      </div>
-                      <p class="slider--item-title">Veritas NetBackup Web UI</p>
-                      <p class="slider--item-description">A brand new modern web UI for a multi-billion dollar enterprise data 
-                        protection product</p>
-                    </a>
-                  </li>
-                  <li class="slider--item ">
-                    <a href="#0">
-                      <div class="slider--item-image">
-                        <img src="assets/img/work-vdl.png" alt="Veritas Design Language">
-                      </div>
-                      <p class="slider--item-title">Veritas Design Language</p>
-                      <p class="slider--item-description">A common design language for all new web-based product UIs</p>
-                    </a>
-                  </li>
-                  <li class="slider--item ">
-                    <a href="#0">
-                      <div class="slider--item-image">
-                        <img src="assets/img/work-boards.png" alt="Horizon boards">
-                      </div>
-                      <p class="slider--item-title">Horizon boards</p>
-                      <p class="slider--item-description">Custom reporting dashboard to expose critical operational metrics
-                        to aid in key business decision making
-                      </p>
-                    </a>
-                  </li>
-                </ul>
-                <div class="slider--prev">
-                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                  viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
-                  <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
-                    <path d="M561,1169C525,1155,10,640,3,612c-3-13,1-36,8-52c8-15,134-145,281-289C527,41,562,10,590,10c22,0,41,9,61,29
-                    c55,55,49,64-163,278L296,510h575c564,0,576,0,597,20c46,43,37,109-18,137c-19,10-159,13-590,13l-565,1l182,180
-                    c101,99,187,188,193,199c16,30,12,57-12,84C631,1174,595,1183,561,1169z"/>
-                  </g>
-                  </svg>
+          <li class="l-section section" style="display:flex; align-items:center">
+            <div class="work"> 
+              <div class="work-item">
+                <a data-bs-toggle="offcanvas" href="#linqwf" role="button" class="work-item-link bottomsheet-open">
+                  <div class="work-item-image">
+                    <img loading="lazy"  src="./assets/img/linqwf/thumbnail.png" width="90%" >
+                  </div>
+                  <h6>LINQ Workflow</h6>
+                  <p>A guided approach to patient monitoring 
+                  </p>
+                </a>
+             </div>
+             <div class="work-item">
+              <a data-bs-toggle="offcanvas" href="#uids" role="button" class="work-item-link bottomsheet-open">
+                <div class="work-item-image">
+                  <img loading="lazy" src="./assets/img/uids/thumbnail.png" height="80%" >
                 </div>
-                <div class="slider--next">
-                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
-                  <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
-                    <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z"/>
-                  </g>
-                  </svg>
+                <h6>Medtronic Design System</h6>
+                <p>Apply brand identity and bring consistency to our digital systems</p>
+              </a>
+             </div>
+             <div class="work-item">
+              <a data-bs-toggle="offcanvas" href="#carelink" role="button" class="work-item-link bottomsheet-open">
+                <div class="work-item-image">
+                  <img loading="lazy" src="./assets/img/carelink/thumbnail.png" height="80%" >
                 </div>
-              </div>
+                <h6>CareLink Platform</h6>
+                <p>Modernizing our patient care ecosystem</p>
+              </a>
+             </div>
+             <div class="work-item">
+              <a data-bs-toggle="offcanvas" href="#netbackup" role="button" class="work-item-link bottomsheet-open">
+                <div class="work-item-image">
+                  <img loading="lazy" src="./assets/img/netbackup/thumbnail.png" height="80%" >
+                </div>
+                <h6>Veritas NetBackup</h6>
+                <p>A brand new responsive UI for enterprise data protection</p>
+              </a>
+             </div>
+             <div class="work-item">
+              <a data-bs-toggle="offcanvas" href="#horizon" role="button" class="work-item-link bottomsheet-open">
+                <div class="work-item-image">
+                  <img loading="lazy" src="./assets/img/horizon/thumbnail.png" height="80%" >
+                </div>
+                <h6>Horizon Boards</h6>
+                <p>Accelerating devOps with custom dashboard metrics</p>
+              </a>
+             </div>
+             <div class="work-item">
+              <a data-bs-toggle="offcanvas" href="#delights" role="button" class="work-item-link bottomsheet-open">
+                <div class="work-item-image">
+                  <img loading="lazy" src="./assets/img/delights/thumbnail.png" height="80%" >
+                </div>
+                <h6>Delights</h6>
+                <p>Illustrations, graphics, logos, and other various creative ventures</p>
+              </a>
+             </div>
             </div>
           </li>
           <li class="l-section section">
@@ -235,102 +209,525 @@
 </div>
 
 <div class="bottomsheet offcanvas offcanvas-start" tabindex="-1" id="photography-canvas" aria-labelledby="offcanvasLabel">
-  <div class="offcanvas-header bottomsheet-header">
-    <h3 class="offcanvas-title" id="offcanvasLabel">Photography</h3>
-    <button type="button" class="btn-close close-canvas" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-  </div>
-  <div class="offcanvas-body bottomsheet-content">
-    <div class="photograph-image-container"><img loading="lazy" src="./assets/img/photography/Frame 36.jpg" style="object-fit:cover; width: 100%;"></div>
-    <div class="photograph-image-container"><img loading="lazy" src="./assets/img/photography/Frame 51.jpg" style="object-fit:cover; width: 100%;"></div>
-    <div class="photograph-image-container"><img loading="lazy" src="./assets/img/photography/Frame 24.jpg" style="object-fit:cover; width: 100%;"></div>
-    <div class="photograph-image-container"><img loading="lazy" src="./assets/img/photography/Frame 42.jpg" style="object-fit:cover; width: 100%;"></div>
-    
-    <div class="photograph-image-container"><img loading="lazy" src="./assets/img/photography/Frame 20.jpg" style="object-fit:cover; width: 100%;"></div>
-    <div class="photograph-image-container"><img loading="lazy" src="./assets/img/photography/Frame 48.jpg" style="object-fit:cover; width: 100%;"></div>
-    <div class="photograph-image-container"><img loading="lazy" src="./assets/img/photography/Frame 23.jpg" style="object-fit:cover; width: 100%;"></div>
-    <div class="photograph-image-container"><img loading="lazy" src="./assets/img/photography/Frame 25.jpg" style="object-fit:cover; width: 100%;"></div>
+  <div class="bottomsheet-container">
+    <div class="offcanvas-header bottomsheet-header">
+      <h3 class="offcanvas-title" id="offcanvasLabel">Photography</h3>
+      <button type="button" class="btn-close close-canvas" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body bottomsheet-content">
+      <div class="photograph-image-container"><img loading="lazy" src="./assets/img/photography/Frame 36.jpg" style="object-fit:cover; width: 100%;"></div>
+      <div class="photograph-image-container"><img loading="lazy" src="./assets/img/photography/Frame 51.jpg" style="object-fit:cover; width: 100%;"></div>
+      <div class="photograph-image-container"><img loading="lazy" src="./assets/img/photography/Frame 24.jpg" style="object-fit:cover; width: 100%;"></div>
+      <div class="photograph-image-container"><img loading="lazy" src="./assets/img/photography/Frame 42.jpg" style="object-fit:cover; width: 100%;"></div>
+      
+      <div class="photograph-image-container"><img loading="lazy" src="./assets/img/photography/Frame 20.jpg" style="object-fit:cover; width: 100%;"></div>
+      <div class="photograph-image-container"><img loading="lazy" src="./assets/img/photography/Frame 48.jpg" style="object-fit:cover; width: 100%;"></div>
+      <div class="photograph-image-container"><img loading="lazy" src="./assets/img/photography/Frame 23.jpg" style="object-fit:cover; width: 100%;"></div>
+      <div class="photograph-image-container"><img loading="lazy" src="./assets/img/photography/Frame 25.jpg" style="object-fit:cover; width: 100%;"></div>
 
-    <div class="photograph-image-container"><img loading="lazy" src="./assets/img/photography/Frame 26.jpg" style="object-fit:cover; width: 100%;"></div>
-    <div class="photograph-image-container"><img loading="lazy" src="./assets/img/photography/Frame 46.jpg" style="object-fit:cover; width: 100%;"></div>
-    <div class="photograph-image-container"><img loading="lazy" src="./assets/img/photography/Frame 28.jpg" style="object-fit:cover; width: 100%;"></div>
-    <div class="photograph-image-container"><img loading="lazy" src="./assets/img/photography/Frame 43.jpg" style="object-fit:cover; width: 100%;"></div>
+      <div class="photograph-image-container"><img loading="lazy" src="./assets/img/photography/Frame 26.jpg" style="object-fit:cover; width: 100%;"></div>
+      <div class="photograph-image-container"><img loading="lazy" src="./assets/img/photography/Frame 46.jpg" style="object-fit:cover; width: 100%;"></div>
+      <div class="photograph-image-container"><img loading="lazy" src="./assets/img/photography/Frame 28.jpg" style="object-fit:cover; width: 100%;"></div>
+      <div class="photograph-image-container"><img loading="lazy" src="./assets/img/photography/Frame 43.jpg" style="object-fit:cover; width: 100%;"></div>
 
-    <div class="photograph-image-container"><img loading="lazy" src="./assets/img/photography/Frame 30.jpg" style="object-fit:cover; width: 100%;"></div>
-    <div class="photograph-image-container"><img loading="lazy" src="./assets/img/photography/Frame 52.jpg" style="object-fit:cover; width: 100%;"></div>
-    <div class="photograph-image-container"><img loading="lazy" src="./assets/img/photography/Frame 32.jpg" style="object-fit:cover; width: 100%;"></div>
-    <div class="photograph-image-container"><img loading="lazy" src="./assets/img/photography/Frame 33.jpg" style="object-fit:cover; width: 100%;"></div>
+      <div class="photograph-image-container"><img loading="lazy" src="./assets/img/photography/Frame 30.jpg" style="object-fit:cover; width: 100%;"></div>
+      <div class="photograph-image-container"><img loading="lazy" src="./assets/img/photography/Frame 52.jpg" style="object-fit:cover; width: 100%;"></div>
+      <div class="photograph-image-container"><img loading="lazy" src="./assets/img/photography/Frame 32.jpg" style="object-fit:cover; width: 100%;"></div>
+      <div class="photograph-image-container"><img loading="lazy" src="./assets/img/photography/Frame 33.jpg" style="object-fit:cover; width: 100%;"></div>
 
-    <div class="photograph-image-container"><img loading="lazy" src="./assets/img/photography/Frame 34.jpg" style="object-fit:cover; width: 100%;"></div>
-    <div class="photograph-image-container"><img loading="lazy" src="./assets/img/photography/Frame 35.jpg" style="object-fit:cover; width: 100%;"></div>
-    <div class="photograph-image-container"><img loading="lazy" src="./assets/img/photography/Frame 53.jpg" style="object-fit:cover; width: 100%;"></div>
-    <div class="photograph-image-container"><img loading="lazy" src="./assets/img/photography/Frame 37.jpg" style="object-fit:cover; width: 100%;"></div>
+      <div class="photograph-image-container"><img loading="lazy" src="./assets/img/photography/Frame 34.jpg" style="object-fit:cover; width: 100%;"></div>
+      <div class="photograph-image-container"><img loading="lazy" src="./assets/img/photography/Frame 35.jpg" style="object-fit:cover; width: 100%;"></div>
+      <div class="photograph-image-container"><img loading="lazy" src="./assets/img/photography/Frame 53.jpg" style="object-fit:cover; width: 100%;"></div>
+      <div class="photograph-image-container"><img loading="lazy" src="./assets/img/photography/Frame 37.jpg" style="object-fit:cover; width: 100%;"></div>
 
-    <div class="photograph-image-container"><img loading="lazy" src="./assets/img/photography/Frame 50.jpg" style="object-fit:cover; width: 100%;"></div>
-    <div class="photograph-image-container"><img loading="lazy" src="./assets/img/photography/Frame 47.jpg" style="object-fit:cover; width: 100%;"></div>
-    <div class="photograph-image-container"><img loading="lazy" src="./assets/img/photography/Frame 55.jpg" style="object-fit:cover; width: 100%;"></div>
-    <div class="photograph-image-container"><img loading="lazy" src="./assets/img/photography/Frame 49.jpg" style="object-fit:cover; width: 100%;"></div>
+      <div class="photograph-image-container"><img loading="lazy" src="./assets/img/photography/Frame 50.jpg" style="object-fit:cover; width: 100%;"></div>
+      <div class="photograph-image-container"><img loading="lazy" src="./assets/img/photography/Frame 47.jpg" style="object-fit:cover; width: 100%;"></div>
+      <div class="photograph-image-container"><img loading="lazy" src="./assets/img/photography/Frame 55.jpg" style="object-fit:cover; width: 100%;"></div>
+      <div class="photograph-image-container"><img loading="lazy" src="./assets/img/photography/Frame 49.jpg" style="object-fit:cover; width: 100%;"></div>
 
+    </div>
   </div>
 </div>
 
 <div class="bottomsheet offcanvas offcanvas-start" tabindex="-1" id="travel-canvas" aria-labelledby="offcanvasLabel">
-  <div class="offcanvas-header bottomsheet-header">
-    <h3 class="offcanvas-title" id="offcanvasLabel">Travel</h3>
-    <button type="button" class="btn-close close-canvas" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-  </div>
-  <div class="offcanvas-body bottomsheet-content">
-    <div class="photograph-image-container"><img loading="lazy" src="./assets/img/travel/Frame 41.jpg" style="object-fit:cover; width: 100%;"></div>
-    <div class="photograph-image-container"><img loading="lazy" src="./assets/img/travel/Frame 59.jpg" style="object-fit:cover; width: 100%;"></div>
-    <div class="photograph-image-container"><img loading="lazy" src="./assets/img/travel/Frame 54.jpg" style="object-fit:cover; width: 100%;"></div>
-    <div class="photograph-image-container"><img loading="lazy" src="./assets/img/travel/Frame 79.jpg" style="object-fit:cover; width: 100%;"></div>
-    
-    <div class="photograph-image-container"><img loading="lazy" src="./assets/img/travel/Frame 78.jpg" style="object-fit:cover; width: 100%;"></div>
-    <div class="photograph-image-container"><img loading="lazy" src="./assets/img/travel/Frame 63.jpg" style="object-fit:cover; width: 100%;"></div>
-    <div class="photograph-image-container"><img loading="lazy" src="./assets/img/travel/Frame 64.jpg" style="object-fit:cover; width: 100%;"></div>
-    <div class="photograph-image-container"><img loading="lazy" src="./assets/img/travel/Frame 76.jpg" style="object-fit:cover; width: 100%;"></div>
-    
-    <div class="photograph-image-container"><img loading="lazy" src="./assets/img/travel/Frame 38.jpg" style="object-fit:cover; width: 100%;"></div>
-    <div class="photograph-image-container"><img loading="lazy" src="./assets/img/travel/Frame 60.jpg" style="object-fit:cover; width: 100%;"></div>
-    <div class="photograph-image-container"><img loading="lazy" src="./assets/img/travel/Frame 61.jpg" style="object-fit:cover; width: 100%;"></div>
-    <div class="photograph-image-container"><img loading="lazy" src="./assets/img/travel/Frame 83.jpg" style="object-fit:cover; width: 100%;"></div>
-    
-    <div class="photograph-image-container"><img loading="lazy" src="./assets/img/travel/Frame 40.jpg" style="object-fit:cover; width: 100%;"></div>
-    <div class="photograph-image-container"><img loading="lazy" src="./assets/img/travel/Frame 70.jpg" style="object-fit:cover; width: 100%;"></div>
-    <div class="photograph-image-container"><img loading="lazy" src="./assets/img/travel/Frame 82.jpg" style="object-fit:cover; width: 100%;"></div>
-    <div class="photograph-image-container"><img loading="lazy" src="./assets/img/travel/Frame 39.jpg" style="object-fit:cover; width: 100%;"></div>
+  <div class="bottomsheet-container">
+    <div class="offcanvas-header bottomsheet-header">
+      <h3 class="offcanvas-title" id="offcanvasLabel">Travel</h3>
+      <button type="button" class="btn-close close-canvas" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body bottomsheet-content">
+      <div class="photograph-image-container"><img loading="lazy" src="./assets/img/travel/Frame 41.jpg" style="object-fit:cover; width: 100%;"></div>
+      <div class="photograph-image-container"><img loading="lazy" src="./assets/img/travel/Frame 59.jpg" style="object-fit:cover; width: 100%;"></div>
+      <div class="photograph-image-container"><img loading="lazy" src="./assets/img/travel/Frame 54.jpg" style="object-fit:cover; width: 100%;"></div>
+      <div class="photograph-image-container"><img loading="lazy" src="./assets/img/travel/Frame 79.jpg" style="object-fit:cover; width: 100%;"></div>
+      
+      <div class="photograph-image-container"><img loading="lazy" src="./assets/img/travel/Frame 78.jpg" style="object-fit:cover; width: 100%;"></div>
+      <div class="photograph-image-container"><img loading="lazy" src="./assets/img/travel/Frame 63.jpg" style="object-fit:cover; width: 100%;"></div>
+      <div class="photograph-image-container"><img loading="lazy" src="./assets/img/travel/Frame 64.jpg" style="object-fit:cover; width: 100%;"></div>
+      <div class="photograph-image-container"><img loading="lazy" src="./assets/img/travel/Frame 76.jpg" style="object-fit:cover; width: 100%;"></div>
+      
+      <div class="photograph-image-container"><img loading="lazy" src="./assets/img/travel/Frame 38.jpg" style="object-fit:cover; width: 100%;"></div>
+      <div class="photograph-image-container"><img loading="lazy" src="./assets/img/travel/Frame 60.jpg" style="object-fit:cover; width: 100%;"></div>
+      <div class="photograph-image-container"><img loading="lazy" src="./assets/img/travel/Frame 61.jpg" style="object-fit:cover; width: 100%;"></div>
+      <div class="photograph-image-container"><img loading="lazy" src="./assets/img/travel/Frame 83.jpg" style="object-fit:cover; width: 100%;"></div>
+      
+      <div class="photograph-image-container"><img loading="lazy" src="./assets/img/travel/Frame 40.jpg" style="object-fit:cover; width: 100%;"></div>
+      <div class="photograph-image-container"><img loading="lazy" src="./assets/img/travel/Frame 70.jpg" style="object-fit:cover; width: 100%;"></div>
+      <div class="photograph-image-container"><img loading="lazy" src="./assets/img/travel/Frame 82.jpg" style="object-fit:cover; width: 100%;"></div>
+      <div class="photograph-image-container"><img loading="lazy" src="./assets/img/travel/Frame 39.jpg" style="object-fit:cover; width: 100%;"></div>
+    </div>
   </div>
 </div>
 
 <div class="bottomsheet offcanvas offcanvas-start" tabindex="-1" id="life-canvas" aria-labelledby="offcanvasLabel">
-  <div class="offcanvas-header bottomsheet-header">
-    <h3 class="offcanvas-title" id="offcanvasLabel">Life</h3>
-    <button type="button" class="btn-close close-canvas" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-  </div>
-  <div class="offcanvas-body bottomsheet-content">
-    <div class="photograph-image-container"><img loading="lazy" src="./assets/img/life/Frame 72.jpg" style="object-fit:cover; width: 100%;"></div>
-    <div class="photograph-image-container"><img loading="lazy" src="./assets/img/life/Frame 84.jpg" style="object-fit:cover; width: 100%;"></div>
-    <div class="photograph-image-container"><img loading="lazy" src="./assets/img/life/Frame 73.jpg" style="object-fit:cover; width: 100%;"></div>
-    <div class="photograph-image-container"><img loading="lazy" src="./assets/img/life/Frame 87.jpg" style="object-fit:cover; width: 100%;"></div>
-    
-    <div class="photograph-image-container"><img loading="lazy" src="./assets/img/life/Frame 75.jpg" style="object-fit:cover; width: 100%;"></div>
-    <div class="photograph-image-container"><img loading="lazy" src="./assets/img/life/Frame 66.jpg" style="object-fit:cover; width: 100%;"></div>
-    <div class="photograph-image-container"><img loading="lazy" src="./assets/img/life/Frame 90.jpg" style="object-fit:cover; width: 100%;"></div>
-    <div class="photograph-image-container"><img loading="lazy" src="./assets/img/life/Frame 77.jpg" style="object-fit:cover; width: 100%;"></div>
+  <div class="bottomsheet-container">
+    <div class="offcanvas-header bottomsheet-header">
+      <h3 class="offcanvas-title" id="offcanvasLabel">Life</h3>
+      <button type="button" class="btn-close close-canvas" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body bottomsheet-content">
+      <div class="photograph-image-container"><img loading="lazy" src="./assets/img/life/Frame 72.jpg" style="object-fit:cover; width: 100%;"></div>
+      <div class="photograph-image-container"><img loading="lazy" src="./assets/img/life/Frame 84.jpg" style="object-fit:cover; width: 100%;"></div>
+      <div class="photograph-image-container"><img loading="lazy" src="./assets/img/life/Frame 73.jpg" style="object-fit:cover; width: 100%;"></div>
+      <div class="photograph-image-container"><img loading="lazy" src="./assets/img/life/Frame 87.jpg" style="object-fit:cover; width: 100%;"></div>
       
-    <div class="photograph-image-container"><img loading="lazy" src="./assets/img/life/Frame 91.jpg" style="object-fit:cover; width: 100%;"></div>
-    <div class="photograph-image-container"><img loading="lazy" src="./assets/img/life/Frame 92.jpg" style="object-fit:cover; width: 100%;"></div>
-    <div class="photograph-image-container"><img loading="lazy" src="./assets/img/life/Frame 93.jpg" style="object-fit:cover; width: 100%;"></div>
-    <div class="photograph-image-container"><img loading="lazy" src="./assets/img/life/Frame 94.jpg" style="object-fit:cover; width: 100%;"></div>
-    
-    <div class="photograph-image-container"><img loading="lazy" src="./assets/img/life/Frame 57.jpg" style="object-fit:cover; width: 100%;"></div>
-    <div class="photograph-image-container"><img loading="lazy" src="./assets/img/life/Frame 74.jpg" style="object-fit:cover; width: 100%;"></div>
-    <div class="photograph-image-container"><img loading="lazy" src="./assets/img/life/Frame 85.jpg" style="object-fit:cover; width: 100%;"></div>
-    <div class="photograph-image-container"><img loading="lazy" src="./assets/img/life/Frame 67.jpg" style="object-fit:cover; width: 100%;"></div>
-    
-    <div class="photograph-image-container"><img loading="lazy" src="./assets/img/life/Frame 65.jpg" style="object-fit:cover; width: 100%;"></div>
-    <div class="photograph-image-container"><img loading="lazy" src="./assets/img/life/Frame 88.jpg" style="object-fit:cover; width: 100%;"></div>
-    <div class="photograph-image-container"><img loading="lazy" src="./assets/img/life/Frame 89.jpg" style="object-fit:cover; width: 100%;"></div>
-    <div class="photograph-image-container"><img loading="lazy" src="./assets/img/life/Frame 86.jpg" style="object-fit:cover; width: 100%;"></div>
+      <div class="photograph-image-container"><img loading="lazy" src="./assets/img/life/Frame 75.jpg" style="object-fit:cover; width: 100%;"></div>
+      <div class="photograph-image-container"><img loading="lazy" src="./assets/img/life/Frame 66.jpg" style="object-fit:cover; width: 100%;"></div>
+      <div class="photograph-image-container"><img loading="lazy" src="./assets/img/life/Frame 90.jpg" style="object-fit:cover; width: 100%;"></div>
+      <div class="photograph-image-container"><img loading="lazy" src="./assets/img/life/Frame 77.jpg" style="object-fit:cover; width: 100%;"></div>
+        
+      <div class="photograph-image-container"><img loading="lazy" src="./assets/img/life/Frame 91.jpg" style="object-fit:cover; width: 100%;"></div>
+      <div class="photograph-image-container"><img loading="lazy" src="./assets/img/life/Frame 92.jpg" style="object-fit:cover; width: 100%;"></div>
+      <div class="photograph-image-container"><img loading="lazy" src="./assets/img/life/Frame 93.jpg" style="object-fit:cover; width: 100%;"></div>
+      <div class="photograph-image-container"><img loading="lazy" src="./assets/img/life/Frame 94.jpg" style="object-fit:cover; width: 100%;"></div>
+      
+      <div class="photograph-image-container"><img loading="lazy" src="./assets/img/life/Frame 57.jpg" style="object-fit:cover; width: 100%;"></div>
+      <div class="photograph-image-container"><img loading="lazy" src="./assets/img/life/Frame 74.jpg" style="object-fit:cover; width: 100%;"></div>
+      <div class="photograph-image-container"><img loading="lazy" src="./assets/img/life/Frame 85.jpg" style="object-fit:cover; width: 100%;"></div>
+      <div class="photograph-image-container"><img loading="lazy" src="./assets/img/life/Frame 67.jpg" style="object-fit:cover; width: 100%;"></div>
+      
+      <div class="photograph-image-container"><img loading="lazy" src="./assets/img/life/Frame 65.jpg" style="object-fit:cover; width: 100%;"></div>
+      <div class="photograph-image-container"><img loading="lazy" src="./assets/img/life/Frame 88.jpg" style="object-fit:cover; width: 100%;"></div>
+      <div class="photograph-image-container"><img loading="lazy" src="./assets/img/life/Frame 89.jpg" style="object-fit:cover; width: 100%;"></div>
+      <div class="photograph-image-container"><img loading="lazy" src="./assets/img/life/Frame 86.jpg" style="object-fit:cover; width: 100%;"></div>
+    </div>
+  </div>
+</div>
+
+
+<div class="bottomsheet offcanvas offcanvas-start" tabindex="-1" id="linqwf" aria-labelledby="offcanvasLabel">
+  <div class="bottomsheet-container">
+    <div class="offcanvas-header bottomsheet-header">
+      <h3 class="offcanvas-title" id="offcanvasLabel">LINQ Workflow</h3>
+      <button type="button" class="btn-close close-canvas" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="headline-divider"></div>
+    <div class="two-col">
+      <div class="col-50">
+        <h4>
+          Problem statement and business case
+        </h4>
+        <p>
+          The market for implantable cardiac monitoring devices has rapidly grown, leading to an exponential 
+          increase in data and some key pain points. Device nurses face challenges managing this overwhelming 
+          data burden. Current workflows lack efficiency and essential tools for ECG adjudication. Clarifying 
+          the importance of data remains a concern, as many device alerts are non-actionable, causing 
+          unnecessary work. 
+        </p>
+        <p>
+          The business goal was to focus on the aspect of a device nurse's day to day interaction with our 
+          product that would have the most impact. By learning more about their end to end workflows, we can 
+          start building a product that best support those workflows, improve tooling, and create a framework 
+          that would support future growth and opportunities.
+        </p>
+      </div>
+      <div class="col-50" style="justify-content: center; position: relative;">
+        <img loading="lazy" src="./assets/img/linqwf/desktop.png" width="80%" style="position: absolute; bottom: 16px;right: 24px">
+      </div>
+    </div>
+
+    <div class="one-col">
+      <h4 style="text-align:center">User-centric process</h4>
+      <p>
+        I helped ensure our development process and strategy that was driven by UX. The core leadership team 
+        comprised of a PM, PO, PDM, technical architect, and UX lead (myself). We collaborated to define our 
+        business objectives, scope, project plan, development process, and KPIs. The development roadmap aligned 
+        to the UX priorities and our key metrics plan ensured that we will be able to measure success.
+      </p>
+
+      <p>
+        Our approach was to take the journey with our users every step of the way. Throughout the development 
+        lifecycle and after release, we continued to partner closely with our users with consistent monthly 
+        engagement to test our assumptions, identify opportunities, and test designs. This helped drive our 
+        direction, solutioning, and gave us the ability and confidence to pivot as needed.
+      </p>
+
+      <img loading="lazy" src="./assets/img/linqwf/process.png" width="100%">
+    </div>
+
+    <div class="one-col">
+      <h4 style="text-align:center">Innovative solution</h4>
+      <p>
+        We developed a comprehensive solution that emphasizes alert prioritization and guides users through 
+        the process of thoroughly reviewing all relevant device data. 
+      </p>
+
+      <p>
+        Key innovations include: a brand new ECG visualizer with higher fidelity and key tooling to aid in 
+        quick and accurate episode adjudication;  workflows that provide seamless access to patient context 
+        and history, allowing users to stay focused on the task at hand without needing to navigate around 
+        hunting for information; a guided workflow that facilitates triaging, to review, to documentation 
+        and routing. 
+      </p>
+
+      <img loading="lazy" src="./assets/img/linqwf/screens.png" width="100%">
+      <p style="text-align:center; font-style:italic">From static reports to data driven interactive workflows</p>
+    </div>
+
+    <div class="two-col">
+      <div class="col-50 list-box">
+        <h5>Role and contributions</h5>
+        <ul>
+          <li>Led the UX strategy, process, research, design, testing, and validation for the project</li>
+          <li>Continuously engaged with users to build empathy, understand needs, and test design concepts</li>
+          <li>Prepared and ran all formative and summative studies, results synthesis, and stakeholder readouts</li>
+          <li>Designed all primary workflows, information architecture, interaction patterns, and visuals</li>
+          <li>A member of the core leadership team with PM, PO, PDM, and technical architect</li>
+        </ul>
+      </div>
+      <div class="col-50 list-box">
+        <h5>Notable achievements</h5>
+        <ul>
+          <li>Our development process set an example for effectively and efficiently delivering on a project on 
+            time, under budget, and with high quality. This recipe for success was roadshowed to organizational 
+            leaders looking to implement process improvements for other projects.</li>
+          <li>We delivered on a full end-to-end solution that delighted our users in a timeframe much shorter 
+            than what the organization is used to</li>
+          <li>Design patent filed for an innovative way to help nurses compare irregular ECG waveforms against 
+            a patient&#39;s normal presenting rhythm.</li>
+          <li>The highly coveted improved ECG viewing tool is being integrated into other parts of the platform 
+            for wider consumption.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="bottomsheet offcanvas offcanvas-start" tabindex="-1" id="uids" aria-labelledby="offcanvasLabel">
+  <div class="bottomsheet-container">
+    <div class="offcanvas-header bottomsheet-header">
+      <h3 class="offcanvas-title" id="offcanvasLabel">Medtronic Design System</h3>
+      <button type="button" class="btn-close close-canvas" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="headline-divider"></div>
+    <div class="two-col">
+      <div class="col-50" style="padding-right:48px">
+        <h4>Unifying digital experiences</h4>
+        <p>
+          The Medtronic Design Global System provides a common language and tooling to bring together designers, 
+          developers, and researchers, operating independently yet harmoniously toward a shared goal - to create 
+          the best possible experience for patients, caregivers, and healthcare professionals.
+        </p>
+        <p>
+          Medtronic lacks a centralized design organization, with each business unit operating in silos. As I 
+          designed and developed the design system for our cardiac space, I looked for ways to bring global 
+          coherence to all of our digital products. Through various partnerships with other orgs and the brand 
+          team, I eventually organized and led a global committee of UX practitioners across multiple business 
+          units to evolve the cardiac platform’s design system I had created, into the official Medtronic Global 
+          Design System.
+        </p>
+      </div>
+      <div class="col-50">
+        <img loading="lazy" src="./assets/img/uids/overview.png" width="100%">
+      </div>
+    </div>
+
+    <div class="two-col">
+      <div class="col-50" style="padding-right:48px">
+        <img loading="lazy" src="./assets/img/uids/components.png" width="100%">
+       
+      </div>
+      <div class="col-50">
+        <h4>Designer and developer assets</h4>
+        <p>
+          The design system includes Figma component libraries for web and native mobile platforms, development 
+          kits, and a documentation portal. The Figma libraries are built with a focus on usability, 
+          extensibility, and maintainability. They are comprised of 140+ components that can be customized to 
+          tens of thousands of variants. Designs leveraging the component library automatically respond to 
+          light and dark modes with a simple toggle. The native mobile components can also switch between iOS 
+          and Android. Along with light and dark modes, designers can build a single screen and have those 
+          designs translate seamlessly to four different color and platform modes without needing to create 
+          additional screens.
+        </p>
+        <div class="list-box" style="margin: 32px 0">
+          <h5>Adoption and outcomes</h5>
+          <ul>
+            <li>Over 140,000 component inserts over 90 days across 23 different teams and projects and growing</li>
+            <li>Over half a million instances of components used in Figma design files</li>
+            <li>Thousands of design and development hours saved</li>
+            <li>Multiple projects kicked off using development kit</li>
+            <li>Company-wide adoption across 20+ teams</li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="bottomsheet offcanvas offcanvas-start" tabindex="-1" id="carelink" aria-labelledby="offcanvasLabel">
+  <div class="bottomsheet-container">
+    <div class="offcanvas-header bottomsheet-header">
+      <h3 class="offcanvas-title" id="offcanvasLabel">CareLink Platform</h3>
+      <button type="button" class="btn-close close-canvas" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="headline-divider"></div>
+    <div class="one-col" style="padding-top:32px">
+      <img loading="lazy" src="./assets/img/carelink/overview.png" width="100%">
+    </div>
+    <div class="one-col">
+      <h4>Evolution of the patient monitoring experience</h4>
+      <p>Carelink is the centralized platform for Medtronic’s cardiac patient monitoring system. Patient cardiac 
+        devices are continuously sending data into Carelink so that nurses are able to remotely monitor their 
+        patients and provide the appropriate level of care. The clinician application is crucial in helping 
+        nurses triage patient alerts quickly and accurately adjudicating detected cardiac events. </p>
+      <p>
+        As the user experience lead, I helped to bring a legacy system onto the cloud, leveraging modern 
+        architecture, transforming to a brand new UI tech stack, and adopting new and improved design patterns.
+      </p>
+    </div>
+
+    <div class="two-col">
+      <div class="col-50 list-box">
+        <h5>Role and contributions</h5>
+        <ul>
+          <li>Lead a global UX team to support the continuous development of the Carelink platform</li>
+          <li>Continuously engage with users to build empathy and understand needs</li>
+          <li>Define the UX strategy, architecture, and vision for a patient monitoring ecosystem</li>
+          <li>Define visual and experience patterns to ensure consistency across the platform</li>
+          <li>Drive design improvements to delight our customers</li>
+          <li>Work with key stakeholders to continually improve our processes to ensure a human-centered 
+            approach to design and project execution</li>
+          <li>Leverage an agile process for software development</li>
+
+        </ul>
+      </div>
+      <div class="col-50 list-box">
+        <h5>Notable achievements</h5>
+        <ul>
+          <li>Led design for the transformation of the UI into a new modern architecture and updated 
+            visual aesthetics to adhere to new brand guidelines</li>
+          <li>Introduced role-based access control to the platform</li>
+          <li>Led the design for numerous workflow efficiency improvements</li>
+          <li>Defined common information architecture and transaction patterns</li>
+          <li>Initiated several innovation projects aimed at refining user workflows</li>
+          <li>Designed new ECG visualizer to aid with performance, clarity, and improved tooling</li>
+          <li>Developed methods for scalable and extensible patient sharing</li>
+          <li>Patents filed for innovative functionality</li>
+
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="bottomsheet offcanvas offcanvas-start" tabindex="-1" id="netbackup" aria-labelledby="offcanvasLabel">
+  <div class="bottomsheet-container">
+    <div class="offcanvas-header bottomsheet-header">
+      <h3 class="offcanvas-title" id="offcanvasLabel">Veritas NetBackup</h3>
+      <button type="button" class="btn-close close-canvas" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="headline-divider"></div>
+    <div class="two-col">
+      <div class="col-50">
+        <h4>
+          Modernizing the web UI
+        </h4>
+        <p>
+          Netbackup is the leading enterprise data protection solution for fortune 500 companies. While it is 
+          the market leader in its field, today's competing products are easier to setup, more visually 
+          refined, and requires much less training to use. As the industry moves away from seasoned backup 
+          admins towards more generalist users, the user experience of NetBackup needed to be updated to match 
+          those trends.
+        </p>
+        <p>
+          I led and designed a brand new web UI with new protection methodologies, workflows, and role-based 
+          access to replace a 20+ year old Java GUI. 
+        </p>
+      </div>
+      <div class="col-50" style="justify-content: center; position: relative;">
+        <img loading="lazy" src="./assets/img/netbackup/overview.png" width="100%">
+      </div>
+    </div>
+    <div class="two-col">
+      <div class="col-50 list-box">
+        <h5>Role and contributions</h5>
+        <ul>
+          <li>Support 17 scrum teams developing the new web UI and underlying capabilities</li>
+          <li>Continuously engage with users to build empathy, understand needs, and test new design concepts</li>
+          <li>Partner with POs to define and drive the UX strategy, architecture, and vision of our enterprise 
+            data protection platform</li>
+          <li>Led a global CX team to support the continuous development of the new NetBackup web UI</li>
+          <li>Provided mentorship and guidance to CX team</li>
+          <li>Aid in the creation of our design system to support all new web and mobile applications</li>
+          <li>Leverage an agile process for software development</li>   
+        </ul>
+      </div>
+      <div class="col-50 list-box">
+        <h5>Notable achievements</h5>
+        <ul>
+          <li>Successfully delivered first release of web UI capable of primary workflows, RBAC, and 
+            supporting VMware protection within one year of project conception</li>
+          <li>Designed and delivered a brand new protection methodology framework that is scalable and 
+            extensible to support all protectable assets such as VMs, databases, filesystems, and more.</li>
+          <li>Designed and delivered on a highly robust RBAC solution that could support the needs of 
+            multi-service tenant providers and individual organizations.</li>
+          <li>Designed and delivered on new simplified recovery workflows</li>
+          <li>Helped grow our NetBackup UX team from three local designers to 8+ designers located in offices worldwide</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="bottomsheet offcanvas offcanvas-start" tabindex="-1" id="horizon" aria-labelledby="offcanvasLabel">
+  <div class="bottomsheet-container">
+    <div class="offcanvas-header bottomsheet-header">
+      <h3 class="offcanvas-title" id="offcanvasLabel">Horizon Boards</h3>
+      <button type="button" class="btn-close close-canvas" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="headline-divider"></div>
+    <div class="two-col">
+      <div class="col-50" style="padding-right:32px">
+        <h4>Bringing transparency to devOps</h4>
+        <p>
+          As an organization, there is a lot of data hidden away in databases that could be extremely beneficial 
+          if exposed in the right way. Engineers and business managers were relying on exporting this data to 
+          excel spreadsheets and spending many hours trying to make sense of the data. </p>
+        <p>   
+          The goal was to build a web-based dashboard application that would help the engineering team gain 
+          access to this data easily and customize the view of it so they can make business critical decisions 
+          and speed up their daily routines. The app allowed users to create custom dashboards filled with 
+          widgets displaying data that is pertinent to their jobs. Widgets are fully customizable to properly 
+          query the desired data and display it in an easily consumable format.
+        </p>
+        <p>
+          As the sole engineer assigned to this task, I was the primary product owner, architect, researcher, 
+          designer, and developer for this project. I started this project as a forerunner in using AngularJS 
+          to develop a single page web application in the org. It was important to develop an architecture 
+          for a framework that would be easy to build upon and allow for others to contribute as well. I 
+          created a dashboard framework where I can easily enhance capabilities, build out new widgets as 
+          needed, and be independent from the backend API layer. The backend capabilites of this application 
+          was built around a microservices architecture that allows for proper versioning and containerization 
+          of APIs. The framework was designed to allow creation of new widgets within minutes by people with 
+          no web development experience and minimal training.
+        </p>
+        <img loading="lazy" src="./assets/img/horizon/screens2.png" width="100%">
+      </div>
+      <div class="col-50" style="padding-right:32px">
+        <img loading="lazy" src="./assets/img/horizon/screens1.png" width="100%">
+        <div class="list-box" style="margin: 40px 0">
+          <h5>Notable achievements</h5>
+          <ul>
+            <li>Successfully delivered a first version of the app leveraging an existing Django backend 
+              and PostgreSQL within 2 weeks of starting. The initial release provided the base 
+              dashboard framework, allowing users to perform custom queries against our bug tracking 
+              database and chart results, status, and trends into several fully customizable widgets
+            </li>
+            <li>Continued the development, design, and evolution of the dashboard app to eventually 
+              provide over 100+ customizable widgets with insights into CICD operations, bug tracking, 
+              release status, and more
+            </li>
+            <li>Significantly contributed to the Improvement and efficiencies of engineering processes 
+              and project tracking for the development of our software
+            </li>
+            <li>Set the example within the org for how a web application should be built. Provided 
+              roadshows and training sessions to engineers around proper web architecture
+            </li>
+            <li>Lived on with mythical status by the current team as “the guy who build this whole 
+              thing in a weekend”
+            </li>
+            <li>Helped colleague replace a metrics script that took 45+ min to run into a highly tuned API endpoint
+              that returned results in less than 5s and could be charted in UI</li>
+            
+            </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="bottomsheet offcanvas offcanvas-start" tabindex="-1" id="delights" aria-labelledby="offcanvasLabel">
+  <div class="bottomsheet-container">
+    <div class="offcanvas-header bottomsheet-header">
+      <h3 class="offcanvas-title" id="offcanvasLabel">Delights</h3>
+      <button type="button" class="btn-close close-canvas" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="headline-divider"></div>
+    <div class="one-col" style="padding-top:32px;">
+      <p>I’m passionate not just in building great experiences, but using design and art as a creative outlet 
+        while having some fun and building culture within the org. Here is a sample of various artistic creations 
+        I’ve made.</p>
+    </div>
+    <div class="two-col">
+      <div class="col-40">
+        <h4>Team avatars</h4>
+        <p>
+          Creating team spirit and cohesion with personalized avatars I illustrated based off our team name: The Lifesavers! 
+        </p>
+        <div style="display: flex; align-items: center; justify-content: center;">
+          <img loading="lazy" src="./assets/img/delights/Lifesavers logo.png" width="165">
+        </div>
+      </div>
+      <div class="col-60">
+        <img loading="lazy" src="./assets/img/delights/avatars.png" width="100%">
+      </div>
+    </div>
+
+    <div class="grey-divider"></div>
+
+    <div class="one-col" style="text-align:center">
+      <h4>Project logos</h4>
+      <p>
+        Cohesive branding for a set of projects under music-based codenames.
+      </p>
+      <div class="grid">
+        <div class="grid-item">
+          <img src="./assets/img/delights/Qorus logo dark.png" width="100%">
+          <p>Increasing clinician efficiencies</p>
+        </div>
+        <div class="grid-item">
+          <img src="./assets/img/delights/Allegro logo dark.png" width="100%">
+          <p>Remove the need for extraneous implant instruments</p>
+        </div>
+        <div class="grid-item">
+          <img src="./assets/img/delights/A cappella logo dark.png" width="100%">
+          <p>Building out a comprehensive ecosystem</p>
+        </div>
+        <div class="grid-item">
+          <img src="./assets/img/delights/Tempo logo dark.png" width="100%">
+          <p>AI-powered tooling</p>
+        </div>
+        <div class="grid-item">
+          <img src="./assets/img/delights/Harmony logo dark.png" width="100%">
+          <p>Connecting patients to doctors through easier data sharing</p>
+        </div>
+        <div class="grid-item">
+          <img src="./assets/img/delights/Cadence logo dark.png" width="100%">
+          <p>Continuous and consistent improve of backend architecture</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="grey-divider"></div>
+
+    <div class="one-col">
+      <h4 style="text-align:center">Presentation templates</h4>
+      <img loading="lazy" src="./assets/img/delights/presentation.png" width="100%">
+    </div>
   </div>
 </div>
 
