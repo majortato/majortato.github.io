@@ -279,12 +279,18 @@ body {
   font-weight: 300;
 }
 
+#viewport {
+  overflow: hidden;
+  touch-action: pan-y !important;
+}
+
 .l-viewport {
   position: relative;
   width: 100%;
   height: 100vh;
   box-shadow: 0 0 45px 5px rgba(0, 0, 0, 0.85);
   overflow: hidden;
+  touch-action: pan-y !important;
 }
 
 .l-wrapper {

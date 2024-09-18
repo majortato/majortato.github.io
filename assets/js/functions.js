@@ -73,14 +73,15 @@ $( document ).ready(function() {
   });
 
   // swipe support for touch devices
-  var targetElement = document.getElementById('viewport'),
-      mc = new Hammer(targetElement);
+  var targetElement = document.getElementById('viewport');
+  var mc = new Hammer(targetElement, {
+    recognizers: [
+      [Hammer.Swipe, { direction: Hammer.DIRECTION_VERTICAL }]
+    ]
+  });
 
-  mc.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
-  mc.on('swipeup swipedown', function(e) {
-
+  mc.on('swipe', function (e) {
     updateHelper(e);
-
   });
 
   $(document).keyup(function(e){
@@ -101,6 +102,7 @@ $( document ).ready(function() {
         nextPos = 0;
 
     if (param.type === "swipeup" || param.keyCode === 40 || param > 0) {
+
       if (curPos !== lastItem) {
         nextPos = curPos + 1;
         updateNavs(nextPos);
