@@ -14,14 +14,6 @@
 </head>
 <body>
 
-<!-- notification for small viewports and landscape oriented smartphones -->
-<div class="device-notification">
-  <a class="device-notification--logo" href="#0">
-    <img src="assets/img/logo.svg" alt="DW Creative">
-    <p>DW Creative</p>
-  </a>
-</div>
-
 <div class="perspective effect-rotate-left">
   <div class="container"><div class="outer-nav--return"></div>
     <div id="viewport" class="l-viewport">
@@ -49,7 +41,7 @@
             <div class="intro">
               <div class="intro--banner">
                 <h1>Hi,<br>I'm David Wan</h1>
-                <p style="max-width:450px;font-size:1.4em;">Experienced UX/UI architect and leader with 20+ years in enterprise platforms, design systems, and digital ecosystems. </p>
+                <p class="intro-overview">Experienced UX/UI architect and leader with 20+ years in enterprise platforms, design systems, and digital ecosystems. </p>
                 <button class="cta">Get in touch
                   <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
                   <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
@@ -81,7 +73,7 @@
               </div>
             </div>
           </li>
-          <li class="l-section section" style="display:flex; align-items:center">
+          <li class="l-section section works-section">
             <div class="work"> 
               <div class="work-item">
                 <a data-bs-toggle="offcanvas" href="#linqwf" role="button" class="work-item-link bottomsheet-open">
@@ -142,6 +134,7 @@
           </li>
           <li class="l-section section">
             <div class="about">
+              <img loading="lazy" src="assets/img/about-visual.jpg" alt="About" style="object-fit: cover;" width="auto">
               <div class="about--banner">
                 <h3>About me</h3>
                 <p style="max-width: 600px;font-size:0.9em;margin-bottom:24px;">
@@ -163,7 +156,6 @@
                   contributions to their industry, and hopefully, developing lifelong friendships along the way.
 
                 </p>
-                <img loading="lazy" src="assets/img/about-visual.jpg" alt="About" style="object-fit: cover;" width="auto" height="600px">
               </div>
               <div class="about--options">
                 <a class="bottomsheet-open" data-bs-toggle="offcanvas" href="#photography-canvas" role="button" aria-controls="offcanvasExample">
@@ -322,7 +314,7 @@
       <button type="button" class="btn-close close-canvas" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="headline-divider"></div>
-    <div class="two-col">
+    <div class="two-col" style="flex-wrap:wrap-reverse">
       <div class="col-50">
         <h4>
           Problem statement and business case
@@ -349,7 +341,7 @@
     <div class="one-col">
       <h4 style="text-align:center">User-centric process</h4>
       <p>
-        I helped ensure our development process and strategy was driven by UX. The core leadership team 
+        I collaborated closely with leadership to ensure our development process and strategy was driven by UX. The core leadership team 
         comprised of a PM, PO, PDM, technical architect, and UX lead (myself). We collaborated to define our 
         business objectives, scope, project plan, development process, and KPIs. The development roadmap aligned 
         to the UX priorities and our key metrics plan ensured that we will be able to measure success.
@@ -421,7 +413,7 @@
     </div>
     <div class="headline-divider"></div>
     <div class="two-col">
-      <div class="col-50" style="padding-right:48px">
+      <div class="col-50" style="padding-right:48px;flex-wrap:wrap-reverse">
         <h4>Unifying digital experiences</h4>
         <p>
           The Medtronic Design Global System provides a common language and tooling to bring together designers, 
@@ -487,7 +479,7 @@
       <img loading="lazy" src="./assets/img/carelink/overview.png" width="100%">
     </div>
     <div class="one-col">
-      <h4>Evolution of the patient monitoring experience</h4>
+      <h4 style="margin-top:0">Evolution of the patient monitoring experience</h4>
       <p>Carelink is the centralized platform for Medtronic’s cardiac patient monitoring system. Patient cardiac 
         devices are continuously sending data into Carelink so that nurses are able to remotely monitor their 
         patients and provide the appropriate level of care. The clinician application is crucial in helping 
@@ -540,7 +532,7 @@
       <button type="button" class="btn-close close-canvas" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="headline-divider"></div>
-    <div class="two-col">
+    <div class="two-col"  style="flex-wrap:wrap-reverse">
       <div class="col-50">
         <h4>
           Modernizing the web UI
@@ -602,7 +594,7 @@
     <div class="headline-divider"></div>
     <div class="two-col">
       <div class="col-50" style="padding-right:32px">
-        <h4>Bringing transparency to devOps</h4>
+        <h4 style="margin-top:0">Bringing transparency to devOps</h4>
         <p>
           As an organization, there is a lot of data hidden away in databases that could be extremely beneficial 
           if exposed in the right way. Engineers and business managers were relying on exporting this data to 
@@ -672,9 +664,9 @@
         while having some fun and building culture within the org. Here is a sample of various artistic creations 
         I’ve made.</p>
     </div>
-    <div class="two-col">
+    <div class="two-col" style="padding-top:0;margin-top:0">
       <div class="col-40">
-        <h4>Team avatars</h4>
+        <h4 style="margin-top:0">Team avatars</h4>
         <p>
           Creating team spirit and cohesion with personalized avatars I illustrated based off our team name: The Lifesavers! 
         </p>
