@@ -15,7 +15,6 @@ $( document ).ready(function() {
   });
 
   $(this).on('mousewheel DOMMouseScroll', function(e){
-
     if (!($('.outer-nav').hasClass('is-vis'))) {
 
       //e.preventDefault();
@@ -76,12 +75,14 @@ $( document ).ready(function() {
   var targetElement = document.getElementById('viewport');
   var mc = new Hammer(targetElement, {
     recognizers: [
-      [Hammer.Swipe, { direction: Hammer.DIRECTION_VERTICAL }]
+      [Hammer.Pan, { direction: Hammer.DIRECTION_ALL }]
     ]
   });
 
-  mc.on('swipe', function (e) {
-    updateHelper(e);
+  mc.on('pan', function (e) {
+    if(Math.abs(e.overallVelocityY) > 4) {  
+      updateHelper(e);
+    }
   });
 
   $(document).keyup(function(e){
@@ -101,7 +102,7 @@ $( document ).ready(function() {
         lastItem = $('.side-nav').children().length - 1,
         nextPos = 0;
 
-    if (param.type === "swipeup" || param.keyCode === 40 || param > 0) {
+    if (param.additionalEvent === "panup" || param.keyCode === 40 || param > 0) {
 
       if (curPos !== lastItem) {
         nextPos = curPos + 1;
@@ -113,7 +114,7 @@ $( document ).ready(function() {
         // updateContent(curPos, nextPos, lastItem);
       }
     }
-    else if (param.type === "swipedown" || param.keyCode === 38 || param < 0){
+    else if (param.additionalEvent === "pandown" || param.keyCode === 38 || param < 0){
       if (curPos !== 0){
         nextPos = curPos - 1;
         updateNavs(nextPos);
