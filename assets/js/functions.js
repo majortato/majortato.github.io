@@ -80,7 +80,7 @@ $( document ).ready(function() {
   });
 
   mc.on('pan', function (e) {
-    if(Math.abs(e.overallVelocityY) > 4) {  
+    if(Math.abs(e.overallVelocityY) > 6) {  
       updateHelper(e);
     }
   });

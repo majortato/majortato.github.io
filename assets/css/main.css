@@ -817,7 +817,7 @@ body {
 .col-50 {
   flex: 1;
   width: 50%;
-  min-width: 350px;
+  min-width: 320px;
 }
 
 .col-40 {
@@ -828,7 +828,7 @@ body {
 
 .col-60 {
   width: 60%;
-  min-width: 350px;
+  min-width: 320px;
   flex: 1;
 }
 
@@ -894,6 +894,19 @@ h4 {
   }
 }
 
+.linqwf-pic {
+  position: absolute;
+  top: 60px;
+  right: 24px;
+}
+
+@media (max-width: 765px) {
+  .linqwf-pic {
+    position: relative;
+    top: 0;
+    left: 40px;
+  }
+}
 .about {
   position: relative;
   display: flex;
