@@ -5,6 +5,8 @@ $( document ).ready(function() {
   // DOMMouseScroll included for firefox support
   var canScroll = true,
       scrollController = null;
+  
+  var allowPanDown = false, allowPanUp = false;
 
   $('.bottomsheet-open').click(function() {
     canScroll = false;
@@ -80,7 +82,7 @@ $( document ).ready(function() {
   });
 
   mc.on('pan', function (e) {
-    if(Math.abs(e.overallVelocityY) > 6) {  
+    if(Math.abs(e.overallVelocityY) > 2) {  
       updateHelper(e);
     }
   });
@@ -102,7 +104,35 @@ $( document ).ready(function() {
         lastItem = $('.side-nav').children().length - 1,
         nextPos = 0;
 
-    if (param.additionalEvent === "panup" || param.keyCode === 40 || param > 0) {
+    if(curPos === 0) {
+      //intro section
+      if(isElementInView(document.getElementById('intro-anchor-end'))) {
+        allowPanUp = true;
+      }
+    } else if(curPos === 1) {
+      //work section
+      if(isElementInView(document.getElementById('works-anchor-start'))) {
+        allowPanDown = true;
+      }
+      if(isElementInView(document.getElementById('works-anchor-end'))) {
+        allowPanUp = true;
+      }
+    } else if(curPos === 2) {
+      //about section
+      if(isElementInView(document.getElementById('about-anchor-start'))) {
+        allowPanDown = true;
+      }
+      if(isElementInView(document.getElementById('about-anchor-end'))) {
+        allowPanUp = true;
+      }
+    } else if(curPos === 3) {
+      //contact section
+      if(isElementInView(document.getElementById('about-anchor-start'))) {
+        allowPanDown = true;
+      }
+    }
+
+    if ((param.additionalEvent === "panup" && allowPanUp) || param.keyCode === 40 || param > 0) {
 
       if (curPos !== lastItem) {
         nextPos = curPos + 1;
@@ -114,7 +144,7 @@ $( document ).ready(function() {
         // updateContent(curPos, nextPos, lastItem);
       }
     }
-    else if (param.additionalEvent === "pandown" || param.keyCode === 38 || param < 0){
+    else if ((param.additionalEvent === "pandown" && allowPanDown) || param.keyCode === 38 || param < 0){
       if (curPos !== 0){
         nextPos = curPos - 1;
         updateNavs(nextPos);
@@ -126,7 +156,8 @@ $( document ).ready(function() {
         // updateContent(curPos, nextPos, lastItem);
       }
     }
-
+    allowPanUp = false;
+    allowPanDown = false;
   }
 
   // sync side and outer navigations
@@ -208,15 +239,30 @@ $( document ).ready(function() {
   }
 
 
-document.querySelectorAll(".work-item").forEach(function (element) {
-  element.addEventListener("mousemove", (e) => {
-    const { x, y } = element.getBoundingClientRect();
-    element.style.setProperty("--x", e.clientX - x);
-    element.style.setProperty("--y", e.clientY - y);
+  document.querySelectorAll(".work-item").forEach(function (element) {
+    element.addEventListener("mousemove", (e) => {
+      const { x, y } = element.getBoundingClientRect();
+      element.style.setProperty("--x", e.clientX - x);
+      element.style.setProperty("--y", e.clientY - y);
+    });
   });
-});
 
+  const anchors = document.querySelectorAll('.pan-anchor');
 
+  // Function to check if the element is in view
+  function isElementInView(el) {
+    const rect = el.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth) &&
+        el.checkVisibility({
+          checkOpacity: false,
+          visibilityProperty: true
+        })
+    );
+  }
 
   outerNav();
   transitionLabels();

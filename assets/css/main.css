@@ -339,6 +339,12 @@ body {
   overflow-y: scroll;
 }
 
+.pan-anchor {
+  background-color: #fff;
+  width: 100px;
+  max-height: 10px;
+}
+
 .device-notification {
   display: none;
   position: fixed;
