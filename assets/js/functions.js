@@ -82,7 +82,7 @@ $( document ).ready(function() {
   });
 
   mc.on('pan', function (e) {
-    if(Math.abs(e.overallVelocityY) > 2) {  
+    if(Math.abs(e.overallVelocityY) > 1) {  
       updateHelper(e);
     }
   });
