@@ -127,12 +127,12 @@ $( document ).ready(function() {
       }
     } else if(curPos === 3) {
       //contact section
-      if(isElementInView(document.getElementById('about-anchor-start'))) {
+      if(isElementInView(document.getElementById('contact-anchor-start'))) {
         allowPanDown = true;
       }
     }
 
-    if ((param.additionalEvent === "panup" && allowPanUp) || param.keyCode === 40 || param > 0) {
+    if (((param.additionalEvent === "panup" || param > 0) && allowPanUp ) || param.keyCode === 40 ) {
 
       if (curPos !== lastItem) {
         nextPos = curPos + 1;
@@ -144,7 +144,7 @@ $( document ).ready(function() {
         // updateContent(curPos, nextPos, lastItem);
       }
     }
-    else if ((param.additionalEvent === "pandown" && allowPanDown) || param.keyCode === 38 || param < 0){
+    else if (((param.additionalEvent === "pandown" || param < 0 ) && allowPanDown ) || param.keyCode === 38 ){
       if (curPos !== 0){
         nextPos = curPos - 1;
         updateNavs(nextPos);
