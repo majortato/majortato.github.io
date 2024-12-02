@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V.I.S.U.A.L Killswitch</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        .pin-container {
+            margin: 20px auto;
+            display: inline-block;
+        }
+        .pin-input {
+            font-size: 24px;
+            text-align: center;
+            letter-spacing: 10px;
+            width: 200px;
+            padding: 10px;
+            border: 2px solid #333;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .pin-pad {
+            display: grid;
+            grid-template-columns: repeat(3, 60px);
+            gap: 10px;
+            justify-content: center;
+        }
+        .pin-button {
+            font-size: 24px;
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            outline: none;
+        }
+        .pin-button:active {
+            background-color: #0056b3;
+        }
+        .clear {
+            grid-column: span 3;
+            background-color: #dc3545;
+        }
+        .clear:active {
+            background-color: #a71d2a;
+        }
+    </style>
+</head>
+<body>
+    <h1>V.I.S.U.A.L Killswitch</h1>
+    <div class="pin-container">
+        <input type="text" id="pel" class="pin-input" readonly maxlength="6" />
+        <div class="pin-pad">
+            <!-- Generate buttons -->
+            <button class="pin-button" onclick="pressKey(1)">1</button>
+            <button class="pin-button" onclick="pressKey(2)">2</button>
+            <button class="pin-button" onclick="pressKey(3)">3</button>
+            <button class="pin-button" onclick="pressKey(4)">4</button>
+            <button class="pin-button" onclick="pressKey(5)">5</button>
+            <button class="pin-button" onclick="pressKey(6)">6</button>
+            <button class="pin-button" onclick="pressKey(7)">7</button>
+            <button class="pin-button" onclick="pressKey(8)">8</button>
+            <button class="pin-button" onclick="pressKey(9)">9</button>
+            <button class="pin-button" onclick="pressKey(0)">0</button>
+            <button class="pin-button clear" onclick="clearPin()">Clear</button>
+        </div>
+    </div>
+    <script>
+        function _0x10dc(){const _0x140dd8=['426135SNESAm','MTIwNjI0','1014SbJfvL','pel','getElementById','8686584nHJwXu','4703556DKFswI','value','length','href','32BfORNv','location','21130qrcIKz','3035718bpySdS','6773515lWbuCN','Incorrect\x20PIN.\x20Try\x20again.','4867520PahOEG'];_0x10dc=function(){return _0x140dd8;};return _0x10dc();}function _0x4bad(_0x49322f,_0x35c734){const _0x10dc2f=_0x10dc();return _0x4bad=function(_0x4bad6d,_0x205e3e){_0x4bad6d=_0x4bad6d-0x185;let _0x5a81ca=_0x10dc2f[_0x4bad6d];return _0x5a81ca;},_0x4bad(_0x49322f,_0x35c734);}const _0x11775a=_0x4bad;(function(_0x497f64,_0x1bf8a8){const _0x58cb00=_0x4bad,_0x24cc03=_0x497f64();while(!![]){try{const _0x4be747=-parseInt(_0x58cb00(0x187))/0x1+-parseInt(_0x58cb00(0x194))/0x2+-parseInt(_0x58cb00(0x18d))/0x3+-parseInt(_0x58cb00(0x186))/0x4+parseInt(_0x58cb00(0x193))/0x5*(parseInt(_0x58cb00(0x189))/0x6)+parseInt(_0x58cb00(0x195))/0x7+-parseInt(_0x58cb00(0x191))/0x8*(-parseInt(_0x58cb00(0x18c))/0x9);if(_0x4be747===_0x1bf8a8)break;else _0x24cc03['push'](_0x24cc03['shift']());}catch(_0x6bca02){_0x24cc03['push'](_0x24cc03['shift']());}}}(_0x10dc,0xc6af9));const pc=_0x11775a(0x188),pdel=document[_0x11775a(0x18b)](_0x11775a(0x18a));function pressKey(_0x258fa9){const _0x4691fc=_0x11775a;pdel[_0x4691fc(0x18e)][_0x4691fc(0x18f)]<0x6&&(pdel[_0x4691fc(0x18e)]+=_0x258fa9),pdel[_0x4691fc(0x18e)][_0x4691fc(0x18f)]===0x6&&release();}function clearPin(){const _0x1d1eb4=_0x11775a;pdel[_0x1d1eb4(0x18e)]='';}function release(){const _0x453a59=_0x11775a;let _0xf8931b=btoa(pel[_0x453a59(0x18e)]);_0xf8931b===pc?window[_0x453a59(0x192)][_0x453a59(0x190)]='entered.html':(alert(_0x453a59(0x185)),clearPin());}
+    </script>
+    </body>
+</html>
