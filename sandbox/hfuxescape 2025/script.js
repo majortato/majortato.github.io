@@ -30,7 +30,7 @@
   }
 
   function checkCode() {
-    if (input === atob(pc2) || atob(pc3) || atob(pc4)) {
+    if (input === atob(pc2) || input === atob(pc3) || input === atob(pc4)) {
       window.location.href = atob(realpc2);
     } else if(input === atob(pc)) {
       window.location.href = atob(realpc);
