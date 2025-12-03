@@ -1,6 +1,7 @@
   const pc = "MjUxMjY3"; 
   const pc2 = "MTIxMTI1";
   const pc3 = "NDMyMTIy";
+  const pc4 = "NDMyMTAy";
   const realpc = "dW5sb2NrZWQuaHRtbA=="; 
   const realpc2 = "dHJ5YWdhaW4uaHRtbA=="
 
@@ -29,7 +30,7 @@
   }
 
   function checkCode() {
-    if (input === atob(pc2) || atob(pc3)) {
+    if (input === atob(pc2) || atob(pc3) || atob(pc4)) {
       window.location.href = atob(realpc2);
     } else if(input === atob(pc)) {
       window.location.href = atob(realpc);
