@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Santa Sleigh PIN Pad — 6 Digit Lock</title>
+  <style>
+    :root{
+      --bg:#071428; /* night sky */
+      --card:#0f2430;
+      --accent:#f5b400; /* warm gold */
+      --snow:#e6f6ff;
+      --btn:#d33a2c; /* sleigh red */
+      --btn-dark:#b82f23;
+    }
+    html,body{height:100%;}
+    body{
+      margin:0; font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      background: radial-gradient(ellipse at 20% 10%, #12304a 0%, transparent 40%),
+                  radial-gradient(ellipse at 90% 80%, #1b2f3f 0%, transparent 30%),
+                  var(--bg);
+      color:white; display:flex; align-items:center; justify-content:center;
+      -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+      overflow:hidden;
+    }
+    /* Snow */
+    .snow{position:absolute; inset:0; pointer-events:none;}
+    .card{
+      width:360px; max-width:92vw; background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.05));
+      border-radius:16px; padding:20px; box-shadow: 0 10px 30px rgba(2,6,23,0.6);
+      position:relative; z-index:2; border:1px solid rgba(255,255,255,0.03);
+      backdrop-filter: blur(5px);
+      -webkit-backdrop-filter: blur(5px); /* For Webkit browsers */
+    }
+    header{display:flex; gap:12px; align-items:center}
+    .logo{
+      width:68px; height:68px; border-radius:12px; background:linear-gradient(135deg,#bb0f1a,#ff4d3f);
+      display:flex; align-items:center; justify-content:center; box-shadow:0 6px 18px rgba(187,15,26,0.18);
+      flex:0 0 68px;
+    }
+    .logo svg{width:44px;height:44px;}
+    h1{font-size:18px;margin:0}
+    p.subtitle{margin:2px 0 0 0;font-size:13px;color:rgba(255,255,255,0.7)}
+
+    .display{
+      margin:16px 0; display:flex; gap:10px; justify-content:center; align-items:center;
+    }
+    .dots{display:flex; gap:8px}
+    .dot{width:18px;height:18px;border-radius:50%;background:rgba(255,255,255,0.12);display:flex;align-items:center;justify-content:center;}
+    .dot.filled{background:var(--accent); box-shadow:0 2px 6px rgba(245,180,0,0.26);}
+
+    .pad{display:grid; grid-template-columns:repeat(3,1fr); gap:10px}
+    button.key{
+      aspect-ratio:1/1; border-radius:12px; border:0; font-size:20px; font-weight:600; cursor:pointer;
+      background:linear-gradient(180deg,var(--btn),var(--btn-dark)); color:white; box-shadow:0 8px 18px rgba(0,0,0,0.45);
+      display:flex; align-items:center; justify-content:center; user-select:none;
+    }
+    button.key:active{transform:translateY(2px); box-shadow:0 4px 10px rgba(0,0,0,0.45)}
+    .control{grid-column:span 3; display:flex; gap:8px;}
+    button.ghost{flex:1; background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01)); color:var(--snow); border-radius:10px; padding:12px; border:1px solid rgba(255,255,255,0.03);}
+    button.primary{flex:1; background:linear-gradient(180deg,#0ea5a0,#0b8f85); border-radius:10px;}
+
+    .sleigh{
+      position:absolute; right:-40px; top:-40px; width:220px; transform:rotate(-8deg); opacity:0.95;
+    }
+    .footer{margin-top:12px; font-size:12px; color:rgba(255,255,255,0.65); text-align:center}
+
+    /* success animation */
+    .success .card{border-color:rgba(0,255,128,0.12)}
+    .flyaway{position:fixed; left:50%; top:50%; translate:-50% -50%; z-index:9999; pointer-events:none}
+
+    @media (max-width:420px){ .card{padding:14px} .logo{width:56px;height:56px} }
+  </style>
+
+</head>
+<body>
+  <div class="snow" aria-hidden="true">
+    <!-- simple falling snow via CSS generated circles could be added, but keep light -->
+  </div>
+
+  <div class="card" id="app" role="application" aria-label="Santa sleigh pin pad">
+    <header>
+      
+      <div>
+        <h1>Santa's Sleigh Lock</h1>
+        <p class="subtitle">Enter the 6-digit runecode to prep the sleigh</p>
+      </div>
+    </header>
+
+    <div class="display" aria-hidden="false">
+      <div class="dots" id="dots" aria-hidden="true">
+        <div class="dot" data-index="0"></div>
+        <div class="dot" data-index="1"></div>
+        <div class="dot" data-index="2"></div>
+        <div class="dot" data-index="3"></div>
+        <div class="dot" data-index="4"></div>
+        <div class="dot" data-index="5"></div>
+      </div>
+
+    </div>
+
+    <div class="pad" role="group" aria-label="pin keypad">
+      <!-- keys 1-9 -->
+      <button class="key" data-key="1">1</button>
+      <button class="key" data-key="2">2</button>
+      <button class="key" data-key="3">3</button>
+      <button class="key" data-key="4">4</button>
+      <button class="key" data-key="5">5</button>
+      <button class="key" data-key="6">6</button>
+      <button class="key" data-key="7">7</button>
+      <button class="key" data-key="8">8</button>
+      <button class="key" data-key="9">9</button>
+      <button class="ghost" id="clear">Clear</button>
+      <button class="key" data-key="0">0</button>
+      <button class="ghost" id="back">⌫</button>
+ 
+    </div>
+
+  </div>
+
+
+
+
+<script type="text/javascript" src="script.js" ></script>
+<script>
+
+document.querySelectorAll('.key').forEach(btn=>{
+  btn.onclick = ()=>{
+    if(code.length < 6){ code += btn.dataset.key; renderDots(); 
+if(code.length === 6 ){
+       checkCode();
+    }
+	}
+    
+  };
+});
+
+document.getElementById('clear').onclick = ()=>{ code=''; renderDots(); };
+
+document.getElementById('back').onclick = ()=>{ code = code.slice(0,-1); renderDots(); };
+
+const style = document.createElement('style');
+style.textContent = `
+  .snow-container { position:fixed; inset:0; pointer-events:none; overflow:hidden; z-index:1; }
+  .snowflake { position:absolute; top:-10px; width:6px; height:6px; background:white; border-radius:50%; filter:blur(1px); animation:fall linear forwards; }
+  @keyframes fall { to { transform: translateY(110vh); } }
+`;
+document.head.appendChild(style);
+
+const snowContainer = document.createElement('div');
+snowContainer.className = 'snow-container';
+document.body.appendChild(snowContainer);
+
+function createSnowflake(){
+  const flake = document.createElement('div');
+  flake.className = 'snowflake';
+  flake.style.left = Math.random()*window.innerWidth + 'px';
+  flake.style.animationDuration = (4 + Math.random()*4) + 's';
+  flake.style.opacity = 0.4 + Math.random()*0.6;
+  snowContainer.appendChild(flake);
+  setTimeout(()=>flake.remove(),9000);
+}
+setInterval(createSnowflake,60);
+</script>
+
+</body>
+</html>

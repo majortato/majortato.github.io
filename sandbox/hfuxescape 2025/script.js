@@ -1,3 +1,6 @@
+// --- PIN PAD LOGIC ---
+const dots = document.querySelectorAll('.dot');
+let code = '';
   const pc = "MjUxMjY3"; 
   const pc2 = "MTIxMTI1";
   const pc3 = "NDMyMTIy";
@@ -5,37 +8,21 @@
   const realpc = "dW5sb2NrZWQuaHRtbA=="; 
   const realpc2 = "dHJ5YWdhaW4uaHRtbA=="
 
-  let input = "";
+function renderDots(){ dots.forEach((d,i)=> d.classList.toggle('filled', i < code.length)); }
 
-  function updateDisplay() {
-    document.getElementById("display").textContent =
-      input.padEnd(6, "_");
-  }
-
-  function pressKey(num) {
-    if (input.length < 6) {
-      input += num;
-    }
-
-    updateDisplay();
-
-    if (input.length === 6) {
-      checkCode();
-    }
-  }
-
-  function clearPin() {
-    input = "";
-    updateDisplay();
-  }
-
-  function checkCode() {
-    if (input === atob(pc2) || input === atob(pc3) || input === atob(pc4)) {
+function checkCode() {
+    if (code === atob(pc2) || code === atob(pc3) || code === atob(pc4)) {
       window.location.href = atob(realpc2);
-    } else if(input === atob(pc)) {
+    } else if(code === atob(pc)) {
       window.location.href = atob(realpc);
     } else {
       alert("Incorrect code. Try again!");
       clearPin();
     }
   }
+
+function clearPin() {
+    code = "";
+    renderDots();
+  }
+

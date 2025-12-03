@@ -1,16 +1,80 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    <head>
-        <title>Winner winner chicken dinner</title>
-    </head>
-    <body>
-        <h1>
-            Congrats! You've successfully unlocked the Time Machine Sleigh. Time to deliver UX goodies to all the people across space and time.
-        </h1>
-        <h3>
-            Please DM David Wan ASAP on teams to let him know you've completed the puzzle so he can track who solved it first.
-            Confirm with code: FLUX CAPACITOR
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Time Sleigh Unlocked!</title>
+  <style>
+    :root{
+      --bg:#071428;
+      --card:#0f2430;
+      --accent:#f5b400;
+      --snow:#e6f6ff;
+    }
+    html,body{height:100%}
+    body{
+      margin:0; font-family:Inter, system-ui, sans-serif;
+      background: radial-gradient(ellipse at 20% 10%, #12304a 0%, transparent 40%),
+                  radial-gradient(ellipse at 90% 80%, #1b2f3f 0%, transparent 30%),
+                  var(--bg);
+      color:white; display:flex; align-items:center; justify-content:center;
+      overflow:hidden;
+    }
+    .card{
+      width:400px; max-width:92vw; background:linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+      border-radius:18px; padding:28px; box-shadow:0 10px 30px rgba(0,0,0,0.45);
+      text-align:center; border:1px solid rgba(255,255,255,0.06);
+      position:relative; z-index:2;
+    }
+    h1{font-size:22px;margin:0 0 10px 0;color:var(--accent)}
+    p{font-size:15px;margin:8px 0 0 0;line-height:1.5;color:rgba(255,255,255,0.9)}
 
-        </h3>
-    </body>
+    /* Santa sleigh celebration SVG */
+    .sleigh{
+      width:240px; margin:0 auto 14px auto;
+      animation:float 3.4s ease-in-out infinite;
+      display:block;
+    }
+    @keyframes float{
+      0%{ transform:translateY(0px); }
+      50%{ transform:translateY(-14px); }
+      100%{ transform:translateY(0px); }
+    }
+
+    /* Snow */
+    .snow-container{ position:fixed; inset:0; pointer-events:none; overflow:hidden; z-index:1; }
+    .snowflake{ position:absolute; top:-10px; width:6px; height:6px; background:white; border-radius:50%; filter:blur(1px); animation:fall linear forwards; }
+    @keyframes fall{ to{ transform:translateY(110vh); } }
+  </style>
+</head>
+<body>
+
+<div class="snow-container" id="snow"></div>
+
+<div class="card" style="backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);">
+  
+
+  <h1>Congratulations</h1>
+  <p>You've successfully unlocked the <strong>Time Sleigh</strong>! Now we can deliver UX goodies to people across all of space and time.</p>
+<br/>
+  <p>Please alert <strong>David Wan</strong> ASAP of this achievement<br>
+     with success code: <strong style="color:var(--accent)">FLUX CAPACITOR</strong>.</p>
+</div>
+
+<script>
+// Snow generation
+const snow = document.getElementById('snow');
+function makeFlake(){
+  const f = document.createElement('div');
+  f.className = 'snowflake';
+  f.style.left = Math.random()*window.innerWidth + 'px';
+  f.style.opacity = 0.4 + Math.random()*0.6;
+  f.style.animationDuration = (4 + Math.random()*4) + 's';
+  snow.appendChild(f);
+  setTimeout(()=>f.remove(),9000);
+}
+setInterval(makeFlake,50);
+</script>
+
+</body>
 </html>
